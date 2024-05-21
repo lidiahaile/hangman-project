@@ -3,6 +3,8 @@ public class DisplayResult {
     private char[] currentGuess;
     private int lives;
 
+
+
     public DisplayResult(String wordSelected, int lives) {
         this.wordSelected = wordSelected;
         this.lives = lives;
@@ -33,13 +35,14 @@ public class DisplayResult {
     }
 
     public boolean isWordGuessed() {
-        for (char c : currentGuess) {
-            if (c == '_') {
+        for (char guess : currentGuess) {
+            if (guess == '_') {
                 return false;
             }
         }
         return true;
     }
+
 
     public boolean isOutOfLives() {
         return lives <= 0;
