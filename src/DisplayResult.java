@@ -3,7 +3,7 @@ public class DisplayResult {
     private char[] currentGuess;
     private int lives;
 
-    public DisplayResult(String selectedWord, int lives) {
+    public DisplayResult(String wordSelected, int lives) {
         this.wordSelected = wordSelected;
         this.lives = lives;
         currentGuess = new char[wordSelected.length()];
