@@ -10,7 +10,7 @@ public class PlayerInteraction {
 
 
     public String getGuess() {
-        System.out.print("Enter your guess: ");
+        System.out.print("Enter your guessed letter or word: ");
         String input = scanner.nextLine();
         return input.toLowerCase();
     }

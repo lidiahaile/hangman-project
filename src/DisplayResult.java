@@ -30,6 +30,8 @@ public class DisplayResult {
         System.out.println("Remaining Lives: " + lives);
     }
 
+
+
     public void decrementLives() {
         lives--;
     }

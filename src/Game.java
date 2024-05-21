@@ -12,7 +12,7 @@ public class Game {
     }
 
     public void start() {
-        playerInteraction.showMessage("Welcome to Hangman!");
+        System.out.println("Welcome to Hangman!");
 
         while (!displayResult.isWordGuessed() && !displayResult.isOutOfLives()) {
             displayResult.showDisplayResult();
@@ -24,23 +24,23 @@ public class Game {
                     displayResult.updateDisplayResult(letterGuess);
                 } else {
                     displayResult.decrementLives();
-                    playerInteraction.showMessage("Incorrect guess. You lost a life.");
+                    System.out.println("Incorrect guess. You lost a life.");
                 }
             } else {
                 if (guess.equals(selectWord.getSelectedWord())) {
-                    playerInteraction.showMessage("Well done! You've guessed the word: " + selectWord.getSelectedWord());
+                    System.out.println("Well done! You've guessed the word: " + selectWord.getSelectedWord());
                     return;
                 } else {
                     displayResult.decrementLives();
-                    playerInteraction.showMessage("Incorrect guess. You lost a life.");
+                    System.out.println("Incorrect guess. You lost a life.");
                 }
             }
         }
 
         if (displayResult.isWordGuessed()) {
-            playerInteraction.showMessage("You won! You've guessed the word: " + selectWord.getSelectedWord());
+            System.out.println("You won! You've guessed the word: " + selectWord.getSelectedWord());
         } else {
-            playerInteraction.showMessage("You have lost! The word was: " + selectWord.getSelectedWord());
+            System.out.println("You have lost! The word was: " + selectWord.getSelectedWord());
         }
     }
 
